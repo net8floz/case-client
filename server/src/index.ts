@@ -21,7 +21,7 @@ socketio.io.on('connect', socket => {
 
   temps.onUpdate(onTempUpdate);
 
-  socket.on('disconnected', () => {
+  socket.on('disconnect', () => {
     temps.offUpdate(onTempUpdate);
   });
 });
